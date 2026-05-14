@@ -43,14 +43,6 @@ export const metadata: Metadata = {
     title: "Al Wafa Fruits | Premium Fresh Fruits in Dubai",
     description:
       "Premium quality fruits supplier based in Business Bay, Dubai. Fast delivery and exceptional service.",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop",
-        width: 1200,
-        height: 630,
-        alt: "Al Wafa Fruits",
-      },
-    ],
     locale: "en_US",
     type: "website",
     siteName: "Al Wafa Fruits",
