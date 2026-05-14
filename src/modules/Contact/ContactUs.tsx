@@ -9,8 +9,8 @@ import toast from "react-hot-toast";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^\+?\d[\d\s\-()]{6,}$/;
 
-function validate(formData: any) {
-  const e: any = {};
+function validate(formData: FormData): FormErrors {
+  const e: FormErrors = {};
   if (!formData.name?.trim()) e.name = "Full name is required";
   if (!formData.email?.trim()) e.email = "Email is required";
   else if (!EMAIL_RE.test(formData.email.trim())) e.email = "Please enter a valid email";
@@ -22,6 +22,19 @@ function validate(formData: any) {
   else if (formData.message.trim().length < 10) e.message = "Message must be at least 10 characters";
   return e;
 }
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  [key: string]: string;
+}
+
 
 function Field({ label, error, children }: any) {
   return (
@@ -36,19 +49,26 @@ function Field({ label, error, children }: any) {
 }
 
 export default function ContactPage() {
-  const empty = { name: "", email: "", phone: "", subject: "", message: "" };
-  const [formData, setFormData] = useState(empty);
-  const [errors, setErrors] = useState<any>({});
+  // Inside your component:
+const empty: FormData = { name: "", email: "", phone: "", subject: "", message: "" };
+
+ 
+const [formData, setFormData] = useState<FormData>(empty);
+const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    if (errors[name]) setErrors(prev => ({ ...prev, [name]: "" }));
-  };
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const { name, value } = e.target;
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
+  setFormData(prev => ({ ...prev, [name]: value }));
+
+  if (errors[name as keyof FormErrors]) {
+    setErrors(prev => ({ ...prev, [name]: "" }));
+  }
+};
+
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
     const errs = validate(formData);
     if (Object.keys(errs).length) {
       setErrors(errs);
