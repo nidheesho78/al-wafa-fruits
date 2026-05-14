@@ -86,7 +86,7 @@ export default function Selection() {
 
         <div className="mt-8 text-center">
           <a
-            href="/products"
+            href="/fresh"
             className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-slate-900 text-slate-900 font-bold rounded-full hover:bg-slate-900 hover:text-white transition-all text-sm sm:text-base"
           >
             View full catalogue →

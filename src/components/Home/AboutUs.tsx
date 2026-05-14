@@ -47,7 +47,7 @@ export default function Philosophy() {
               </div>
               <div className="rounded-2xl overflow-hidden aspect-square bg-emerald-600 flex items-center justify-center">
                 <div className="text-center text-white p-4">
-                  <div className="text-4xl sm:text-5xl font-black mb-1">17+</div>
+                  <div className="text-4xl sm:text-5xl font-black mb-1">2+</div>
                   <div className="text-sm font-semibold opacity-80">Years of<br />excellence</div>
                 </div>
               </div>
