@@ -45,7 +45,7 @@ export default function Features() {
 
         {/* Clients / Logos marquee */}
         <div>
-          <p className="text-red-600 text-xs font-bold tracking-widest uppercase mb-4 text-center sm:text-left">
+          <p className="text-red-600 text-xs font-bold tracking-widest uppercase mb-4 ">
             · Our Clients
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">

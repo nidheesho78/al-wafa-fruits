@@ -150,7 +150,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-white/30">
-          <p>© {new Date().getFullYear()} Rooh Al Wafa Foodstuff Trading L.L.C. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Rooh Al Wafa Trading L.L.C. All Rights Reserved.</p>
          
         </div>
       </div>

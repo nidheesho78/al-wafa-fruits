@@ -1,10 +1,11 @@
 'use client';
 
 const stats = [
-  { value: '90,000m²', label: 'Cold storage' },
+  // { value: '90,000m²', label: 'Cold storage' },
   { value: '2+', label: 'Years of legacy' },
   { value: '300+', label: 'Premium products' },
   { value: '25', label: 'Countries sourced' },
+  { value: '50+', label: 'Curated Varieties' },
 ];
 
 const tickerItems = [

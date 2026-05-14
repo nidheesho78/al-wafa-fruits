@@ -237,8 +237,14 @@ export default function ServicesPage() {
                 {services.map((s, i) => (
                   <button
                     key={i}
-                    onClick={() => setActiveService(i)}
-                    className="group flex items-center gap-5 rounded-2xl px-6 py-5 text-left transition-all duration-300"
+                    // onClick={() => setActiveService(i)}
+
+                    onClick={() => {
+  setActiveService(i);
+  const el = document.getElementById(`service-${i + 1}`);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}}
+                    className="group flex items-center cursor-pointer gap-5 rounded-2xl px-6 py-5 text-left transition-all duration-300"
                     style={{
                       backgroundColor: activeService === i ? '#1a1a2e' : '#ffffff',
                       boxShadow: activeService === i ? '0 8px 32px rgba(26,26,46,0.18)' : 'none',

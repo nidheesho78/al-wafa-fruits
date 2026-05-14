@@ -45,12 +45,32 @@ export default function Philosophy() {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden aspect-square bg-emerald-600 flex items-center justify-center">
+              {/* <div className="rounded-2xl overflow-hidden aspect-square bg-emerald-600 flex items-center justify-center">
                 <div className="text-center text-white p-4">
                   <div className="text-4xl sm:text-5xl font-black mb-1">2+</div>
                   <div className="text-sm font-semibold opacity-80">Years of<br />excellence</div>
                 </div>
-              </div>
+              </div> */}
+
+
+              <div className="rounded-2xl overflow-hidden aspect-square relative flex items-center justify-center">
+  {/* Background image */}
+  <img
+    src="https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=80&w=600&auto=format&fit=crop"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+  {/* Dark green overlay */}
+  <div className="absolute inset-0 bg-emerald-900/70" />
+  {/* Text */}
+  <div className="relative text-center text-white p-4 z-10">
+    <div className="text-4xl sm:text-5xl font-black mb-1">2+</div>
+    <div className="text-sm font-semibold opacity-80">
+      Years of<br />excellence
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>

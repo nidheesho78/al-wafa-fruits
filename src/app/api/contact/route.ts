@@ -1,138 +1,21 @@
-// import { NextRequest, NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
 
-// export async function POST(req: NextRequest) {
-//   try {
-//     const body = await req.json();
-//     const { name, email, phone = "", subject, message } = body;
 
-//     if (
-//       !name?.trim() ||
-//       !email?.trim() ||
-//       !subject?.trim() ||
-//       !message?.trim()
-//     ) {
-//       return new Response(
-//         JSON.stringify({ success: false, error: "Missing required fields" }),
-//         { status: 400, headers: { "Content-Type": "application/json" } }
-//       );
-//     }
 
-//     const transporter = nodemailer.createTransport({
-//       host: "smtp.zoho.in",
-//       port: 465,
-//       secure: true,
-//       auth: {
-//         user: process.env.ZOHO_EMAIL,
-//         pass: process.env.ZOHO_PASSWORD,
-//       },
-//       // Remove the tls block before deploying to production
-//       tls: {
-//         rejectUnauthorized: false,
-//       },
-//     });
-
-//     // Send inquiry email to inbox
-//     await transporter.sendMail({
-//       from: `"Website Contact" <${process.env.ZOHO_EMAIL}>`,
-//       to: process.env.ZOHO_EMAIL,
-//       replyTo: email,
-//       subject: `New Inquiry: ${subject}`,
-//       html: `
-//         <h3>New Contact Message</h3>
-//         <p><strong>Name:</strong> ${name}</p>
-//         <p><strong>Email:</strong> ${email}</p>
-//         <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-//         <p><strong>Subject:</strong> ${subject}</p>
-//         <p><strong>Message:</strong><br>${message.replace(/\n/g, "<br>")}</p>
-//       `,
-//     });
-
-//     // Auto-reply to the user
-//     await transporter.sendMail({
-//       from: `"Rooh Al Wafa Foodstuff Trading" <${process.env.ZOHO_EMAIL}>`,
-//       to: email,
-//       subject: "Thank You for Reaching Out – Rooh Al Wafa",
-//       html: `
-//         <!DOCTYPE html>
-//         <html lang="en">
-//         <head>
-//           <meta charset="UTF-8" />
-//           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//           <title>Thank You - Rooh Al Wafa</title>
-//           <style>
-//             body { font-family: Georgia, serif; margin: 0; padding: 0; background-color: #f5f3ef; color: #333; }
-//             .container { max-width: 600px; margin: 30px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-//             .header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2018 100%); padding: 40px 30px; text-align: center; }
-//             .header img { max-width: 160px; height: auto; }
-//             .header-text { color: #c2b790; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-top: 16px; }
-//             .content { padding: 40px 35px; line-height: 1.8; font-size: 16px; }
-//             .content p { margin: 0 0 18px; color: #444; }
-//             .highlight { color: #005369; font-weight: bold; }
-//             .signature { margin-top: 36px; border-top: 1px solid #eee; padding-top: 28px; font-size: 15px; }
-//             .sig-name { font-weight: bold; color: #1a1a1a; font-size: 17px; margin-bottom: 4px; }
-//             .sig-title { color: #666; font-size: 13px; margin-bottom: 6px; }
-//             .sig-company { color: #005369; font-weight: bold; font-size: 14px; letter-spacing: 0.05em; }
-//             .contact-info { margin-top: 14px; font-size: 13px; color: #666; line-height: 2; }
-//             .contact-info a { color: #005369; text-decoration: none; }
-//             .footer { background: #1a1a1a; padding: 22px; text-align: center; font-size: 12px; color: #888; }
-//             .footer a { color: #c2b790; text-decoration: none; }
-//           </style>
-//         </head>
-//         <body>
-//           <div class="container">
-//             <div class="header">
-//               <div style="font-size:24px; font-weight:900; color:#c2b790; letter-spacing:0.08em;">ROOH AL WAFA</div>
-//               <div class="header-text">Foodstuff Trading LLC · Dubai, UAE</div>
-//             </div>
-//             <div class="content">
-//               <p>Dear <strong>${name}</strong>,</p>
-//               <p>
-//                 Thank you for getting in touch with
-//                 <span class="highlight">Rooh Al Wafa Foodstuff Trading LLC</span>.
-//               </p>
-//               <p>
-//                 We have received your message and our team is reviewing it carefully.
-//                 We will get back to you very shortly with a personalized response.
-//               </p>
-//               <div class="signature">
-//                 <div class="sig-name">Azeez Ahmed</div>
-//                 <div class="sig-title">General Manager</div>
-//                 <div class="sig-company">Rooh Al Wafa Foodstuff Trading LLC</div>
-//                 <div class="contact-info">
-//                   <div>📞 <a href="tel:+971526995266">+971 52 699 5266</a></div>
-//                   <div>📞 <a href="tel:+971553316210">+971 55 331 6210</a></div>
-//                   <div>✉️ <a href="mailto:hello@alwafafruits.com">hello@alwafafruits.com</a></div>
-//                   <div>📍 Citadel Tower, Business Bay, Dubai, UAE</div>
-//                 </div>
-//               </div>
-//             </div>
-//             <div class="footer">
-//               © ${new Date().getFullYear()} Rooh Al Wafa Foodstuff Trading LLC. All rights reserved.<br />
-//               Fresh produce, delivered with care.
-//             </div>
-//           </div>
-//         </body>
-//         </html>
-//       `,
-
-//     });
-
-//     return new Response(JSON.stringify({ success: true }), {
-//       status: 200,
-//       headers: { "Content-Type": "application/json" },
-//     });
-//   } catch (error) {
-//     console.error("Contact API Error:", error.message);
-//     return new Response(
-//       JSON.stringify({ success: false, error: error.message || "Failed to send email" }),
-//       { status: 500, headers: { "Content-Type": "application/json" } }
-//     );
-//   }
-// }
 
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LOGO NOTE:
+// Replace LOGO_URL below with a publicly accessible URL, e.g.:
+//   • Vercel:     "https://<your-domain>/alwafa.png"   ← put file in /public
+//   • Cloudinary: "https://res.cloudinary.com/<cloud>/image/upload/alwafa.png"
+//   • ImgBB:       direct link from imgbb.com
+//
+// OR convert the PNG to base64 and use:
+//   src="data:image/png;base64,<base64string>"
+// ─────────────────────────────────────────────────────────────────────────────
+const LOGO_URL = "https://alwafafruits.com/alwafa.png"; // ← swap this
 
 export async function POST(req: NextRequest) {
   try {
@@ -226,51 +109,52 @@ export async function POST(req: NextRequest) {
 </head>
 <body style="margin:0;padding:0;background-color:#f0ebe0;">
 
-  <!-- Outer wrapper -->
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0ebe0;">
     <tr>
       <td class="email-wrapper" align="center" style="padding:32px 16px;">
 
-        <!-- Main card -->
         <table class="main-card" role="presentation" width="100%" style="max-width:600px;background:#ffffff;border-radius:24px;overflow:hidden;box-shadow:0 8px 48px rgba(26,26,46,0.12);">
 
           <!-- ── HERO HEADER ─────────────────────────────────────────── -->
           <tr>
-            <td class="hero-pad" style="background:linear-gradient(145deg,#1a1a2e 0%,#12122a 60%,#0e0e22 100%);padding:48px 40px 40px;text-align:center;position:relative;">
+            <td class="hero-pad" style="background:linear-gradient(145deg,#1a1a2e 0%,#12122a 60%,#0e0e22 100%);padding:48px 40px 40px;text-align:center;">
 
-              <!-- Top accent line -->
               <div style="width:60px;height:3px;background:#e63946;border-radius:2px;margin:0 auto 28px;"></div>
 
-              <!-- Logo -->
+              <!-- Logo container with text fallback -->
               <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 20px;">
                 <tr>
-                  <td style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:14px 20px;">
+                  <td style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:14px 24px;text-align:center;">
+                    <!--[if !mso]><!-->
                     <img
-                      src="https://alwafafruits.com/alwafa.png"
+                      src="${LOGO_URL}"
                       alt="Alwafa Fruits"
                       width="140"
-                      style="display:block;height:auto;max-width:140px;"
+                      height="auto"
+                      style="display:block;height:auto;max-width:140px;min-width:80px;"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
                     />
+                    <!--<![endif]-->
+                    <!-- Fallback text logo shown if image fails -->
+                    <div style="display:none;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:900;color:#ffffff;letter-spacing:0.04em;white-space:nowrap;">
+                      <span style="color:#e63946;">✦</span> Alwafa Fruits
+                    </div>
                   </td>
                 </tr>
               </table>
 
-              <!-- Eyebrow -->
               <p style="font-family:'Inter',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:#e63946;margin:0 0 14px;">
                 · Message Received ·
               </p>
 
-              <!-- Headline -->
               <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:900;color:#ffffff;line-height:1.2;margin:0 0 12px;">
-                Thank you,<br /><em style="color:#e8d5b0;">${name.split(' ')[0]}.</em>
+                Thank you,<br /><em style="color:#e8d5b0;">${name.split(" ")[0]}.</em>
               </h1>
 
-              <!-- Subline -->
-              <p style="font-family:'Inter',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;margin:0;max-width:380px;margin-left:auto;margin-right:auto;">
+              <p style="font-family:'Inter',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;margin:0 auto;max-width:380px;">
                 We've received your enquiry and our team will be in touch with you personally — usually within a few hours.
               </p>
 
-              <!-- Bottom fade -->
               <div style="margin-top:36px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);"></div>
             </td>
           </tr>
@@ -278,7 +162,7 @@ export async function POST(req: NextRequest) {
           <!-- ── ENQUIRY SUMMARY BOX ─────────────────────────────────── -->
           <tr>
             <td style="padding:0 40px;">
-              <table role="presentation" width="100%" style="margin-top:-1px;">
+              <table role="presentation" width="100%">
                 <tr>
                   <td style="background:#f8f4ed;border:1px solid #e8e0d4;border-top:0;border-radius:0 0 16px 16px;padding:24px 28px;">
                     <p style="font-family:'Inter',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#9a9aaa;margin:0 0 14px;">
@@ -289,11 +173,15 @@ export async function POST(req: NextRequest) {
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:12px;color:#9a9aaa;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:5px 0;width:90px;">Subject</td>
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:14px;color:#1a1a2e;font-weight:700;padding:5px 0;">${subject}</td>
                       </tr>
-                      ${phone ? `
+                      ${
+                        phone
+                          ? `
                       <tr>
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:12px;color:#9a9aaa;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:5px 0;">Phone</td>
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:14px;color:#1a1a2e;padding:5px 0;">${phone}</td>
-                      </tr>` : ''}
+                      </tr>`
+                          : ""
+                      }
                       <tr>
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:12px;color:#9a9aaa;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:5px 0;">Reply to</td>
                         <td style="font-family:'Inter',Arial,sans-serif;font-size:14px;color:#e63946;padding:5px 0;">${email}</td>
@@ -309,7 +197,6 @@ export async function POST(req: NextRequest) {
           <tr>
             <td class="body-pad" style="padding:40px 40px 32px;">
 
-              <!-- Opening paragraph -->
               <p style="font-family:'Inter',Arial,sans-serif;font-size:16px;color:#3a3a4a;line-height:1.8;margin:0 0 20px;">
                 Dear <strong style="color:#1a1a2e;">${name}</strong>,
               </p>
@@ -320,21 +207,15 @@ export async function POST(req: NextRequest) {
                 You can expect a personal response from us — not a template — tailored to exactly what you've asked. We'll be in touch very shortly.
               </p>
 
-              <!-- Divider with icon -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
-                <tr>
-                  <td style="height:1px;background:linear-gradient(90deg,transparent,#e8e0d4,transparent);"></td>
-                </tr>
+                <tr><td style="height:1px;background:linear-gradient(90deg,transparent,#e8e0d4,transparent);"></td></tr>
               </table>
 
-              <!-- What to expect block -->
               <p style="font-family:'Inter',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#9a9aaa;margin:0 0 18px;">
                 What Happens Next
               </p>
 
-              <!-- Steps -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                <!-- Step 1 -->
                 <tr>
                   <td style="width:36px;vertical-align:top;padding-top:2px;">
                     <div style="width:28px;height:28px;background:#1a1a2e;border-radius:50%;text-align:center;line-height:28px;font-family:'Inter',Arial,sans-serif;font-size:11px;font-weight:800;color:#e63946;">01</div>
@@ -344,7 +225,6 @@ export async function POST(req: NextRequest) {
                     <p style="font-family:'Inter',Arial,sans-serif;font-size:13px;color:#7a7a8a;line-height:1.6;margin:0;">We read every enquiry personally and match it to the right specialist.</p>
                   </td>
                 </tr>
-                <!-- Step 2 -->
                 <tr>
                   <td style="width:36px;vertical-align:top;padding-top:2px;">
                     <div style="width:28px;height:28px;background:#e63946;border-radius:50%;text-align:center;line-height:28px;font-family:'Inter',Arial,sans-serif;font-size:11px;font-weight:800;color:#ffffff;">02</div>
@@ -354,7 +234,6 @@ export async function POST(req: NextRequest) {
                     <p style="font-family:'Inter',Arial,sans-serif;font-size:13px;color:#7a7a8a;line-height:1.6;margin:0;">A dedicated response to your specific enquiry — typically within 2–4 business hours.</p>
                   </td>
                 </tr>
-                <!-- Step 3 -->
                 <tr>
                   <td style="width:36px;vertical-align:top;padding-top:2px;">
                     <div style="width:28px;height:28px;background:#1a1a2e;border-radius:50%;text-align:center;line-height:28px;font-family:'Inter',Arial,sans-serif;font-size:11px;font-weight:800;color:#e63946;">03</div>
@@ -366,11 +245,8 @@ export async function POST(req: NextRequest) {
                 </tr>
               </table>
 
-              <!-- Divider -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:32px 0;">
-                <tr>
-                  <td style="height:1px;background:linear-gradient(90deg,transparent,#e8e0d4,transparent);"></td>
-                </tr>
+                <tr><td style="height:1px;background:linear-gradient(90deg,transparent,#e8e0d4,transparent);"></td></tr>
               </table>
 
               <!-- Stats strip -->
@@ -403,7 +279,6 @@ export async function POST(req: NextRequest) {
                 <tr>
                   <td style="padding:28px 28px 24px;">
 
-                    <!-- Sig top -->
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td style="vertical-align:top;">
@@ -417,10 +292,8 @@ export async function POST(req: NextRequest) {
                       </tr>
                     </table>
 
-                    <!-- Divider -->
                     <div style="height:1px;background:rgba(255,255,255,0.07);margin:18px 0;"></div>
 
-                    <!-- Contact details -->
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td style="padding:4px 0;">
@@ -444,13 +317,12 @@ export async function POST(req: NextRequest) {
                       <tr>
                         <td style="padding:4px 0;" colspan="2">
                           <p style="font-family:'Inter',Arial,sans-serif;font-size:13px;color:rgba(255,255,255,0.4);margin:0;">
-                            <span style="color:#e63946;margin-right:8px;">📍</span>Citadel Tower, Business Bay, Dubai, UAE
+                            <span style="color:#e63946;margin-right:8px;">📍</span>Citadel Tower, Business Bay, Plot No.62 Office 2105-E-505, Dubai, United Arab Emirates
                           </p>
                         </td>
                       </tr>
                     </table>
 
-                    <!-- CTA button -->
                     <div style="margin-top:20px;text-align:center;">
                       <a href="https://alwafafruits.com" style="display:inline-block;padding:12px 32px;background:#e63946;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:700;border-radius:50px;text-decoration:none;letter-spacing:0.05em;">
                         Visit alwafafruits.com →
@@ -466,24 +338,17 @@ export async function POST(req: NextRequest) {
           <!-- ── FOOTER ─────────────────────────────────────────────── -->
           <tr>
             <td class="footer-pad" style="background:#f8f4ed;border-top:1px solid #e8e0d4;padding:28px 40px;text-align:center;">
-
-             
-
-              <!-- Divider -->
               <div style="height:1px;background:#e8e0d4;margin:0 0 16px;"></div>
-
               <p style="font-family:'Inter',Arial,sans-serif;font-size:11px;color:#b0b0b8;line-height:1.7;margin:0 0 6px;">
                 © ${year} Rooh Al Wafa Foodstuff Trading LLC. All rights reserved.
               </p>
               <p style="font-family:'Inter',Arial,sans-serif;font-size:11px;color:#c8bfb2;font-style:italic;margin:0;">
                 Farm-fresh produce, delivered with care — across Dubai and beyond.
               </p>
-
             </td>
           </tr>
 
         </table>
-        <!-- /Main card -->
 
       </td>
     </tr>
@@ -499,11 +364,12 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-  const message = error instanceof Error ? error.message : "Failed to send email";
-  console.error("Contact API Error:", message);
-  return new Response(
-    JSON.stringify({ success: false, error: message }),
-    { status: 500, headers: { "Content-Type": "application/json" } }
-  );
-}
+    const message =
+      error instanceof Error ? error.message : "Failed to send email";
+    console.error("Contact API Error:", message);
+    return new Response(JSON.stringify({ success: false, error: message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }

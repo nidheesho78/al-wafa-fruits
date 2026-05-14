@@ -15,7 +15,7 @@ const slides = [
     overlay: 'from-black/70 via-black/40 to-transparent',
   },
   {
-    badge: '★ Since 2008',
+    badge: '★ Since 2023', 
     title: 'Leading the way\nin fresh produce\nexcellence.',
     description:
       'Experience the pinnacle of freshness, rooted in tradition. From our orchards to your table, naturally preserved with care.',
