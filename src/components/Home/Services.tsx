@@ -57,7 +57,9 @@ export default function Services() {
                 <h3 className="text-xl sm:text-2xl font-black text-slate-900 mt-1 mb-3">{s.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
                 <div className="mt-6 flex items-center gap-2 text-slate-900 font-bold text-sm group-hover:text-red-600 transition-colors">
+                  <a href="/services">
                   Learn more <span>→</span>
+                  </a>
                 </div>
               </div>
             </div>
