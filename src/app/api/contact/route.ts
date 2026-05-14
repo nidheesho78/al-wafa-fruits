@@ -499,10 +499,11 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Contact API Error:", error.message);
-    return new Response(
-      JSON.stringify({ success: false, error: error.message || "Failed to send email" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
-  }
+  const message = error instanceof Error ? error.message : "Failed to send email";
+  console.error("Contact API Error:", message);
+  return new Response(
+    JSON.stringify({ success: false, error: message }),
+    { status: 500, headers: { "Content-Type": "application/json" } }
+  );
+}
 }
