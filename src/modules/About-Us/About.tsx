@@ -214,7 +214,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-base leading-relaxed">
                   In just two years we&apos;ve built direct grower partnerships across
-                  15+ countries, a cold-chain network delivering farm-to-floor in
+                  25+ countries, a cold-chain network delivering farm-to-floor in
                   under 24 hours, and a reputation in Dubai as the wholesale
                   partner that never lets quality slip.
                 </p>
@@ -528,7 +528,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
               { end: 50,  suffix: '+',  title: 'Wholesale Clients',   desc: 'Hotels, restaurants & grocers' },
-              { end: 15,  suffix: '+',  title: 'Source Countries',    desc: 'Direct grower partnerships' },
+              { end: 25,  suffix: '+',  title: 'Source Countries',    desc: 'Direct grower partnerships' },
               { end: 100, suffix: '%',  title: 'Client Satisfaction', desc: 'Zero compromise on quality' },
               { end: 24,  suffix: 'h',  title: 'Delivery Standard',   desc: 'Cold-chain, every order' },
             ].map((s, i) => (
