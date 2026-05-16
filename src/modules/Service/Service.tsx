@@ -91,7 +91,7 @@ const services = [
     tagline: 'Scale without compromise.',
     description:
       'Bulk fresh produce sourced directly from growers across 25+ countries, delivered to hotels, supermarkets, restaurants, and distributors across Dubai — every crate to the same uncompromising standard.',
-    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1400&auto=format&fit=crop',
+    image: "/sections/wholesale.png",
     highlights: [
       'Minimum order flexibility — from 50kg to full truckloads',
       'Direct grower partnerships in 25+ countries',
@@ -107,7 +107,7 @@ const services = [
     tagline: 'Flavour locked in, every time.',
     description:
       'Sub-24h temperature-controlled logistics from orchard gate to your floor. Our refrigerated fleet and humidity-managed storage ensure every item arrives at peak freshness, flavour, and food-safe temperature.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop',
+    image: "/sections/cold-chain.png",
     highlights: [
       'Farm-to-door in under 24 hours',
       'Real-time temperature monitoring throughout transit',
@@ -123,7 +123,7 @@ const services = [
     tagline: 'A gift worth remembering.',
     description:
       'Hand-curated premium fruit baskets for Eid, weddings, and corporate gifting — branded or bespoke. Every hamper is assembled with the same care we give our wholesale crates: nothing leaves our floor unless it is perfect.',
-    image: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1400&auto=format&fit=crop',
+    image: "/sections/gift.png",
     highlights: [
       'Fully branded packaging & custom ribbon',
       'Bespoke curation by fruit variety, origin, or theme',
@@ -139,7 +139,7 @@ const services = [
     tagline: 'Your kitchen, our produce.',
     description:
       'Standing supply agreements for hotels, five-star restaurants, and catering companies. Predictable schedules, agreed specifications, and a team that anticipates your needs — so your kitchen never misses a beat.',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1400&auto=format&fit=crop',
+    image: "/sections/catering.png",
     highlights: [
       'Fixed weekly supply schedules to your spec',
       'Flexible substitution protocols for seasonal gaps',
@@ -182,7 +182,7 @@ export default function ServicesPage() {
       <PageBanner
         title="Our Services"
         subtitle="Built for scale, crafted for care."
-        image="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1920&auto=format&fit=crop"
+        image="/banner/service-banner.png"
       />
 
       {/* ── INTRO — cream bg ────────────────────────────────────────────── */}

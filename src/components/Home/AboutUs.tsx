@@ -32,7 +32,7 @@ export default function Philosophy() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="rounded-2xl overflow-hidden aspect-[3/4] col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=800&auto=format&fit=crop"
+                src="/home/heirlooms-one.png"
                 alt="Orchard fruit on tree"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
@@ -40,7 +40,7 @@ export default function Philosophy() {
             <div className="flex flex-col gap-3 sm:gap-4">
               <div className="rounded-2xl overflow-hidden aspect-square">
                 <img
-                  src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=600&auto=format&fit=crop"
+                  src="/home/heirlooms-two.png"
                   alt="Farmer harvesting"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -56,7 +56,7 @@ export default function Philosophy() {
               <div className="rounded-2xl overflow-hidden aspect-square relative flex items-center justify-center">
   {/* Background image */}
   <img
-    src="https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=80&w=600&auto=format&fit=crop"
+    src="/home/bg-one.png"
     alt=""
     aria-hidden="true"
     className="absolute inset-0 w-full h-full object-cover"

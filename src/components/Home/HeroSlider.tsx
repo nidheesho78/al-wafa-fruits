@@ -11,7 +11,7 @@ const slides = [
     description:
       'Temperature-controlled logistics across 25 countries — flavour locked in, freshness never compromised.',
     image:
-      'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920&auto=format&fit=crop',
+      "/banner/home-one.png",
     overlay: 'from-black/70 via-black/40 to-transparent',
   },
   {
@@ -20,7 +20,7 @@ const slides = [
     description:
       'Experience the pinnacle of freshness, rooted in tradition. From our orchards to your table, naturally preserved with care.',
     image:
-      'https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1920&auto=format&fit=crop',
+      "/banner/home-two.png",
     overlay: 'from-black/70 via-black/40 to-transparent',
   },
   {
@@ -29,7 +29,7 @@ const slides = [
     description:
       'Hand-arranged baskets for weddings, Eid, corporate gifting — every detail considered, every fruit perfect.',
     image:
-      'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1920&auto=format&fit=crop',
+       "/banner/home-three.png",
     overlay: 'from-black/70 via-black/40 to-transparent',
   },
 ];

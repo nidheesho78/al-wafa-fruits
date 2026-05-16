@@ -91,7 +91,7 @@ const coreValues = [
     icon: Leaf,
     title: 'Farm-Fresh Sourcing',
     description:
-      'Direct grower partnerships across 15+ countries. Tree-ripened, never artificially rushed — freshness is never faked.',
+      'Direct grower partnerships across 25+ countries. Tree-ripened, never artificially rushed — freshness is never faked.',
   },
   {
     icon: Truck,
@@ -137,7 +137,7 @@ const principles = [
 const stats = [
   { end: 2,   suffix: ' yrs', label: 'In Operation',          desc: 'Founded & growing in Dubai' },
   { end: 50,  suffix: '+',    label: 'Wholesale Clients',      desc: 'Hotels, restaurants & retailers' },
-  { end: 15,  suffix: '+',    label: 'Source Countries',       desc: 'Direct grower partnerships' },
+  { end: 25,  suffix: '+',    label: 'Source Countries',       desc: 'Direct grower partnerships' },
   { end: 24,  suffix: 'h',    label: 'Farm-to-Door',           desc: 'Cold chain delivery standard' },
 ];
 
@@ -168,7 +168,7 @@ export default function AboutPage() {
       <PageBanner
         title="About Us"
         subtitle="Dubai's freshest wholesale produce partner."
-        image="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920&auto=format&fit=crop"
+        image="/banner/about-banner.png"
       />
 
       {/* ── WHO WE ARE ─────────────────────────────────────────────────── */}
@@ -259,7 +259,7 @@ export default function AboutPage() {
               {/* Main image */}
               <div className="relative h-[420px] md:h-[500px] lg:h-[540px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1400&auto=format&fit=crop"
+                  src="/sections/about-main.png"
                   alt="Fresh wholesale produce"
                   className="w-full h-full object-cover"
                 />
@@ -365,7 +365,7 @@ export default function AboutPage() {
             <AnimatedSection animation="slideLeft" className="md:col-span-3 h-[340px] md:h-auto">
               <div className="h-full min-h-[300px] rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1400&auto=format&fit=crop"
+                  src="/sections/abt-one.png"
                   alt="Sorting premium produce"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -377,7 +377,7 @@ export default function AboutPage() {
               <AnimatedSection animation="slideRight" delay={100} className="flex-1">
                 <div className="h-[160px] md:h-full rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=800&auto=format&fit=crop"
+                    src="/sections/abt-two.png"
                     alt="Fresh fruits"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />

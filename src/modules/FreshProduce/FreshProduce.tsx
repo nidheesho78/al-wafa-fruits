@@ -49,7 +49,7 @@ const produceItems: Produce[] = [
     origins: ['IN', 'PK', 'PH'],
     badge: 'Premium',
     badgeColor: '#e63946',
-    image: 'https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=800&auto=format&fit=crop',
+    image: "/category/mango.png",
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ const produceItems: Produce[] = [
     origins: ['CN', 'NZ', 'CL'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=800&auto=format&fit=crop',
+    image: "/category/apple.png",
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const produceItems: Produce[] = [
     origins: ['EG', 'ZA', 'ES'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1547514701-42782101795e?q=80&w=800&auto=format&fit=crop',
+    image: "/category/orange.png",
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ const produceItems: Produce[] = [
     origins: ['TR', 'IN', 'IT'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?q=80&w=800&auto=format&fit=crop',
+    image: "/category/grapes.png",
   },
   {
     id: 5,
@@ -89,7 +89,7 @@ const produceItems: Produce[] = [
     origins: ['EC', 'PH', 'LK'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=800&auto=format&fit=crop',
+    image: "/category/banana.png",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const produceItems: Produce[] = [
     origins: ['AE', 'IR', 'JO'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1563114773-84221bd62daa?q=80&w=800&auto=format&fit=crop',
+    image: "/category/watermelon.png",
   },
   {
     id: 7,
@@ -109,7 +109,7 @@ const produceItems: Produce[] = [
     origins: ['VN', 'TH', 'MY'],
     badge: 'Exotic',
     badgeColor: '#9b5de5',
-    image: 'https://images.unsplash.com/photo-1527325678964-54921661f888?q=80&w=800&auto=format&fit=crop',
+    image: "/category/dragonfruit.png",
   },
   {
     id: 8,
@@ -119,7 +119,7 @@ const produceItems: Produce[] = [
     origins: ['IR', 'IN', 'ES'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1565202124971-ec48f0de5547?q=80&w=800&auto=format&fit=crop',
+    image: "/category/pomegranate.png",
   },
   {
     id: 9,
@@ -129,7 +129,7 @@ const produceItems: Produce[] = [
     origins: ['PH', 'CR', 'ZA'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=800&auto=format&fit=crop',
+    image: "/category/pineapple.png",
   },
   {
     id: 10,
@@ -139,7 +139,7 @@ const produceItems: Produce[] = [
     origins: ['NZ', 'CL', 'TR'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=800&auto=format&fit=crop',
+    image: "/category/kiwi.png",
   },
   {
     id: 11,
@@ -149,7 +149,7 @@ const produceItems: Produce[] = [
     origins: ['US', 'ZA', 'ES'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=800&auto=format&fit=crop',
+    image: "/category/strawberry.png",
   },
   {
     id: 12,
@@ -159,7 +159,7 @@ const produceItems: Produce[] = [
     origins: ['MX', 'PE', 'KE'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=800&auto=format&fit=crop',
+    image: "/category/avocado.png",
   },
   {
     id: 13,
@@ -169,7 +169,7 @@ const produceItems: Produce[] = [
     origins: ['MA', 'TR', 'NL'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?q=80&w=800&auto=format&fit=crop',
+    image: "/category/cherry-tomatoes.png",
   },
   {
     id: 14,
@@ -179,7 +179,7 @@ const produceItems: Produce[] = [
     origins: ['NL', 'ES', 'MA'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?q=80&w=800&auto=format&fit=crop',
+    image: "/category/bell-peppers.png",
   },
   {
     id: 15,
@@ -189,7 +189,7 @@ const produceItems: Produce[] = [
     origins: ['ES', 'KE', 'CN'],
     badge: 'Seasonal',
     badgeColor: '#e98c16',
-    image: 'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?q=80&w=800&auto=format&fit=crop',
+    image: "/category/broccoli.png",
   },
   {
     id: 16,
@@ -199,7 +199,7 @@ const produceItems: Produce[] = [
     origins: ['TH', 'MY', 'ID'],
     badge: 'Exotic',
     badgeColor: '#9b5de5',
-    image: 'https://images.unsplash.com/photo-1566135188432-5b6a4278ef0d?q=80&w=800&auto=format&fit=crop',
+    image: "/category/rambutan.png",
   },
   {
     id: 17,
@@ -209,7 +209,7 @@ const produceItems: Produce[] = [
     origins: ['SA', 'AE', 'JO'],
     badge: 'Premium',
     badgeColor: '#e63946',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800&auto=format&fit=crop',
+    image: "/category/dates.png",
   },
   {
     id: 18,
@@ -219,7 +219,7 @@ const produceItems: Produce[] = [
     origins: ['AE', 'IR', 'NL'],
     badge: 'Year-round',
     badgeColor: '#2d6a4f',
-    image: 'https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?q=80&w=800&auto=format&fit=crop',
+    image: "/category/cucumber.png",
   },
 ];
 
@@ -399,7 +399,7 @@ export default function FreshProducePage() {
       <PageBanner
         title="Fresh Produce"
         subtitle="Farm-direct. Inspected three times. Delivered in under 24 hours."
-        image="https://images.unsplash.com/photo-1490885578174-acda8905c2c6?q=80&w=1920&auto=format&fit=crop"
+        image="/banner/fresh-banner.png"
       />
 
       {/* ── INTRO ───────────────────────────────────────────────────────── */}
@@ -496,9 +496,7 @@ export default function FreshProducePage() {
                 What makes our produce{' '}
                 <span className="text-red-600">different.</span>
               </h2>
-              <p className="text-base max-w-xs leading-relaxed" style={{ color: '#6a6a7a' }}>
-                Four non-negotiables we hold to on every single crate, every single day.
-              </p>
+             
             </div>
           </AnimatedSection>
 
@@ -544,9 +542,7 @@ export default function FreshProducePage() {
               >
                 The full selection.
               </h2>
-              <p className="text-base max-w-xs leading-relaxed" style={{ color: '#6a6a7a' }}>
-                Updated weekly as seasons shift and new origins come online.
-              </p>
+             
             </div>
           </AnimatedSection>
 
@@ -684,28 +680,28 @@ export default function FreshProducePage() {
               <div className="grid grid-cols-2 gap-3 relative">
                 <div className="rounded-2xl overflow-hidden h-52 md:h-64">
                   <img
-                    src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=800&auto=format&fit=crop"
+                    src="/sections/wholesale.png"
                     alt="Exotic fruits"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden h-52 md:h-64 mt-6">
                   <img
-                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop"
+                    src="/sections/about-main.png"
                     alt="Fresh vegetables"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden h-52 md:h-64 -mt-6">
                   <img
-                    src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=800&auto=format&fit=crop"
+                    src="/sections/gift.png"
                     alt="Premium produce"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden h-52 md:h-64">
                   <img
-                    src="https://images.unsplash.com/photo-1546548970-71785318a17b?q=80&w=800&auto=format&fit=crop"
+                    src="/sections/delivery.png"
                     alt="Fresh selection"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />

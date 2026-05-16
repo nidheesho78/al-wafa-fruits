@@ -21,7 +21,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-white py-10 sm:py-12 lg:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Feature cards */}
         <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-20 sm:mb-28">
@@ -44,7 +44,7 @@ export default function Features() {
         </div>
 
         {/* Clients / Logos marquee */}
-        <div>
+        {/* <div>
           <p className="text-red-600 text-xs font-bold tracking-widest uppercase mb-4 ">
             · Our Clients
           </p>
@@ -54,10 +54,10 @@ export default function Features() {
               <span className="text-red-600">across the region.</span>
             </h2>
            
-          </div>
+          </div> */}
 
           {/* Scrolling logos */}
-          <div className="border-t border-b border-stone-200 overflow-hidden py-5">
+          {/* <div className="border-t border-b border-stone-200 overflow-hidden py-5">
             <div className="flex gap-0 animate-clients whitespace-nowrap">
               {['Almond Kitchen', 'Pearl Hospitality', 'Ritz Carlton', 'FreshMart', 'Four Seasons', 'Green Leaf', 'Royal Plaza', 'Souq Fresh', 'Almond Kitchen', 'Pearl Hospitality', 'Ritz Carlton', 'FreshMart', 'Four Seasons', 'Green Leaf', 'Royal Plaza', 'Souq Fresh'].map(
                 (name, i) => (
@@ -71,7 +71,11 @@ export default function Features() {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
+
+
+
+        
       </div>
 
       <style jsx>{`

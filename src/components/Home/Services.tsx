@@ -5,25 +5,25 @@ const services = [
     number: '01',
     title: 'Wholesale Supply',
     desc: 'Bulk fresh produce sourced from 25+ countries, delivered directly to hotels, supermarkets, and distributors.',
-    image: 'https://images.unsplash.com/photo-1506617564039-2f3b650b7010?q=80&w=800&auto=format&fit=crop',
+    image: "/sections/wholesale.png",
   },
   {
     number: '02',
     title: 'Cold-chain Logistics',
     desc: 'Sub-24h refrigerated delivery ensuring every item arrives at peak freshness, flavour, and food-safe temperature.',
-    image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?q=80&w=800&auto=format&fit=crop',
+    image: "/sections/cold-chain.png",
   },
   {
     number: '03',
     title: 'Gift Hampers',
     desc: 'Hand-curated premium fruit baskets for Eid, weddings, and corporate gifting — branded or bespoke.',
-    image: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=800&auto=format&fit=crop',
+    image: "/sections/gift.png",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-white py-10 sm:py-12 lg:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-red-600 text-xs font-bold tracking-widest uppercase mb-4">· Our Services</p>
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 sm:mb-16">

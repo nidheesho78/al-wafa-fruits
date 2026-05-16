@@ -55,18 +55,13 @@ export default function Sidebar({ isOpen, onClose, navLinks }: SidebarProps) {
               <Link href="/" onClick={onClose} className="flex items-center gap-3">
                 <div className="relative w-11 h-11">
                   <Image
-                    src="/alwafa.png"
+                    src="/logoo.png"
                     alt="Al Wafa Fruits"
-                    fill
-                    className="object-contain"
+                    width={200}
+                    height={200}
+                   className="object-cover w-[120px] h-[60px] sm:w-[160px] sm:h-[80px]"
                     priority
                   />
-                </div>
-                <div>
-                  <span className="block text-2xl font-bold tracking-tighter text-gray-900">
-                    alwafa<span className="text-[#e63946]">fruits</span>
-                  </span>
-                  
                 </div>
               </Link>
 

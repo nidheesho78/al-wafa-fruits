@@ -107,7 +107,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
       <PageBanner
         title="Contact Us"
         subtitle="Tell us what you'd like, when you'd like it — we'll be in touch within one business day."
-        image="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920&auto=format&fit=crop"
+        image="/banner/contact-banner.png"
       />
 
       <section className="py-20 px-6">

@@ -1,3 +1,6 @@
+
+
+
 "use client";
 
 import Link from 'next/link';
@@ -19,38 +22,34 @@ export default function Footer() {
 
       {/* Main Content */}
       <div className="w-full mx-auto px-6 md:px-10 lg:px-16 pt-16 pb-8 relative z-10">
-        {/* Brand + Tagline */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 pb-14 border-b border-white/10 mb-14">
-          {/* Logo & Brand */}
-          <div className="flex items-center gap-5">
-            <div className="relative w-20 h-20 flex-shrink-0">
-              <Image
-                src="/alwafa.png"
-                alt="Al Wafa Fruits"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold tracking-tighter leading-none">
-                alwafa<span className="text-[#e63946]">fruits</span>
+
+        {/* Four Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 pb-16 border-b border-white/10">
+
+          {/* Column 1: Logo + Tagline */}
+          <div className="flex flex-col gap-5">
+            {/* White card logo box — matches reference style */}
+            <div className="w-[160px] h-[120px] bg-white rounded-lg flex items-center justify-center p-3 shadow-md">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/logoalwafa.png"
+                  alt="Al Wafa Fruits"
+                  fill
+                  className="object-contain"
+                />
               </div>
-             
             </div>
+
+            {/* Tagline below logo */}
+            <p className="text-sm leading-relaxed text-white/60 max-w-[220px]">
+              Curating the world's finest fruits with care, integrity, and uncompromising quality — 
+              delivered fresh from farm to your table.
+            </p>
           </div>
 
-          {/* Tagline */}
-          <p className="text-base md:text-lg leading-relaxed text-white/60 max-w-md lg:text-right">
-            Curating the world's finest fruits with care, integrity, and uncompromising quality — 
-            delivered fresh from farm to your table.
-          </p>
-        </div>
-
-        {/* Three Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 pb-16">
-          {/* Column 1: Company */}
+          {/* Column 2: Company */}
           <div>
-            <h4 className="uppercase text-[#e63946] text-xs lg:text-lg tracking-[3px] font-semibold mb-8">
+            <h4 className="uppercase text-[#e63946] text-xs lg:text-sm tracking-[3px] font-semibold mb-8">
               Company
             </h4>
             <ul className="space-y-4">
@@ -74,9 +73,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: What We Do */}
+          {/* Column 3: What We Do */}
           <div>
-            <h4 className="uppercase text-[#e63946] text-xs lg:text-lg tracking-[3px] font-semibold mb-8">
+            <h4 className="uppercase text-[#e63946] text-xs lg:text-sm tracking-[3px] font-semibold mb-8">
               What We Do
             </h4>
             <ul className="space-y-4">
@@ -98,9 +97,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* Column 4: Contact */}
           <div>
-            <h4 className="uppercase text-[#e63946] text-xs lg:text-lg tracking-[3px] font-semibold mb-8">
+            <h4 className="uppercase text-[#e63946] text-xs lg:text-sm tracking-[3px] font-semibold mb-8">
               Contact Us
             </h4>
 
@@ -108,7 +107,7 @@ export default function Footer() {
               {/* Office */}
               <div>
                 <p className="uppercase text-xs tracking-widest text-white/40 mb-2">Office</p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-white/70 leading-relaxed text-[15px]">
                   Citadel Tower, Business Bay<br />
                   Plot No.62, Office 2105-E-505<br />
                   Dubai, United Arab Emirates
@@ -121,13 +120,13 @@ export default function Footer() {
                 <div className="space-y-1.5">
                   <a
                     href="tel:+971526995266"
-                    className="block text-white/70 hover:text-white transition-colors"
+                    className="block text-white/70 hover:text-white transition-colors text-[15px]"
                   >
                     +971 52 699 5266
                   </a>
                   <a
                     href="tel:+971553316210"
-                    className="block text-white/70 hover:text-white transition-colors"
+                    className="block text-white/70 hover:text-white transition-colors text-[15px]"
                   >
                     +971 55 331 6210
                   </a>
@@ -139,7 +138,7 @@ export default function Footer() {
                 <p className="uppercase text-xs tracking-widest text-white/40 mb-2">Email</p>
                 <a
                   href="mailto:hello@alwafafruits.com"
-                  className="text-white/70 hover:text-[#e63946] transition-colors"
+                  className="text-white/70 hover:text-[#e63946] transition-colors text-[15px]"
                 >
                   hello@alwafafruits.com
                 </a>
@@ -149,9 +148,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-white/30">
+        <div className="pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-white/30">
           <p>© {new Date().getFullYear()} Rooh Al Wafa Trading L.L.C. All Rights Reserved.</p>
-         
         </div>
       </div>
     </footer>
