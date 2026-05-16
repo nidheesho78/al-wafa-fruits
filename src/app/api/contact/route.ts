@@ -15,7 +15,7 @@ import nodemailer from "nodemailer";
 // OR convert the PNG to base64 and use:
 //   src="data:image/png;base64,<base64string>"
 // ─────────────────────────────────────────────────────────────────────────────
-const LOGO_URL = "https://alwafafruits.com/logo.png"; // ← swap this
+const LOGO_URL = "https://alwafafruits.com/logoo.png"; // ← swap this
 
 export async function POST(req: NextRequest) {
   try {
